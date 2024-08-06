@@ -1,0 +1,306 @@
+/* start tooltips  */
+.custom-tooltip {
+  --bs-tooltip-bg: rgba(0, 0, 0, 0.896);
+  --bs-tooltip-color: white;
+}
+
+/* end tooltips  */
+
+/*start   tag content style  */
+.card .tagCommentContent .tagContent a {
+  font-size: 0.82rem;
+}
+
+/*  end tag content style  */
+
+/* <!-- start  style custom  nav hover   --> */
+
+li a.customNavHover {
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+li a.customNavHover:hover {
+  color: rgb(82, 122, 118);
+}
+
+/* <!-- end   style custom  nav hover   --> */
+
+/* start custom mobile  */
+@media (max-width:768px) {
+  .customMobile {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+  }
+
+  .customMobile nav.navbar {
+
+    border-radius: 0 !important;
+    width: 100% !important;
+
+  }
+}
+
+/* end custom mobile  */
+/* start add Post */
+.addPostFrom {
+
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.143);
+  border-left: 5px solid rgb(88, 88, 112);
+}
+
+.addPostFrom input {
+  background-color: #e4e6e9;
+  margin-left: 20px !important;
+
+
+  font-weight: 400;
+
+}
+
+.addPostFrom input::placeholder {
+  color: #717176;
+}
+
+
+#addPostForm #postTitle {
+  transition: 0.3s;
+}
+
+#addPostForm textarea {
+  border: none;
+  outline: none;
+  min-height: 100px;
+  height: fit-content;
+
+  transition: 0.3s;
+  resize: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#addPostForm textarea:focus {
+  box-shadow: 0px -5px 12px rgba(133, 164, 174, 0.269);
+}
+
+.imgContainer {
+  height: 250px;
+  border-top: 1px solid rgba(0, 0, 0, 0.049);
+  position: relative;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.imgContainer input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+
+  cursor: pointer;
+}
+
+/* end add Post */
+
+/* start  comments style */
+#comments {
+  margin-bottom: 15px;
+  transition: 0.4s;
+}
+
+@media (max-width :767px) {
+  #comments .box {
+
+    flex-direction: column;
+  }
+
+}
+
+#comments .box {
+  border-bottom: 1px solid rgba(8, 134, 128, 0.108) !important;
+  gap: 0 !important;
+}
+
+#comments p {
+  color: #464545;
+  padding-left: 40px;
+
+}
+
+#addComments textarea {
+  resize: none;
+}
+
+/* end comments style */
+.headerContent {
+  transition: 0.3s;
+}
+
+/* start profile  */
+.profile {
+  border-left: 3px solid #083a8480;
+}
+
+.profile .userInfo {
+  background-color: rgba(212, 239, 247, 0.081);
+
+}
+
+.userInfo .userContent h5 {
+  font-size: 1.4em;
+  font-variant: small-caps;
+  opacity: 0.9;
+  color: rgb(8, 41, 84);
+}
+
+@media (max-width :552px) {
+
+  .profile {
+    flex-direction: column;
+    width: 90% !important;
+    align-items: center;
+    gap: 5px !important;
+  }
+
+  .profile .userInfo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px !important;
+  }
+
+  .activiteInfo {
+    gap: 15px;
+  }
+
+
+}
+
+/* start  delete and app post btn :  */
+
+@media (max-width : 767px) {
+
+  #editPostBtn,
+  #deletePostBtn {
+    font-size: 0.8rem !important;
+  }
+
+}
+@media (max-width : 500px) {
+
+  #postUsername {
+    font-size: 1.2rem !important;
+  }
+  #editPostBtn,
+  #deletePostBtn {
+    font-size: 0.75rem !important;
+  
+  }
+
+}
+@media (max-width : 370px) {
+
+  #postUsername {
+    font-size: 1rem !important;
+  }
+  #editPostBtn,
+  #deletePostBtn {
+    font-size: 0.70rem !important;
+  
+  }
+
+}
+
+/* end  delete and app post btn :  */
+
+
+/* end profile  */
+
+/* end profile */
+
+img:not(.img-fluid) {
+  cursor: pointer;
+}
+
+/* Start upDown animation */
+.parent {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  background-color: rgba(0, 0, 0, 0.892);
+  z-index: 100;
+  display: flex;
+  transition: opacity 0.3s;
+  flex-wrap: wrap;
+  z-index: 99999;
+}
+
+.points {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.parent h3 {
+  color: #2c4755;
+  margin-left: 20px;
+  font-size: 2.3em;
+  font-weight: 800;
+
+}
+
+@media (max-width:768px) {
+
+  .parent h3 {
+    font-size: 2em;
+    text-align: center;
+  }
+}
+
+.points div {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(67, 153, 172, 0.632);
+  animation-name: upDown;
+  animation-duration: 2s;
+  animation-iteration-count: 10;
+  animation-direction: alternate;
+
+
+}
+
+.parent .point2 {
+  animation-delay: 0.3s;
+}
+
+.parent .point3 {
+  animation-delay: 0.6s;
+}
+
+@keyframes upDown {
+
+  to {
+    opacity: 0.6;
+    transform: translateY(-40px);
+  }
+}
+/* End upDown animation */
+
+/* start  add post form  */
+/*
+input[data-bs-target="#addPostModal"]{
+ 
+
+}
+/* end  add post form  */
